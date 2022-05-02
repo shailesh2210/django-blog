@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container">
+    <div class="blog-pots my-5">
+        <div class="text-center">
+
+            <h1> <b> Search Results: </b></h1>
+            <h3> <b> This is where we post announcements, tips and tricks, new and updated features. </b></h3>
+            <hr class="my-5">
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="container">
+    {% for post in allposts %}
+    <div class="blog-posts mx-3 my-3">
+        <div class="card" style="width: 18rem;">
+            <div class="shadow p-3 mb-5 bg-body rounded width-35px">
+                <img src={{post.image}} class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">{{post.title}}</h5>
+                    <p class="card-text">{{post.desc| truncatechars:150}}</p>
+                    <h5 class="card-title">{{post.author}}</h5>
+                    <h5 class="card-title">{{post.timestamp}}</h5>
+                    <a href="{{post.slug}}" class="btn btn-dark">View</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock body %}

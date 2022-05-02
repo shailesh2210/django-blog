@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block blogactive %} active {% endblock blogactive %}
+
+
+{% block body %}
+
+<!-- This is where we post announcements, tips and tricks, new and updated features  -->
+
+<!-- learn. connect , code  -->
+
+
+<div class="container">
+    <div class="blog-pots my-5">
+        <div class="text-center">
+
+            <h1> <b> WebDevCodes Blog</b></h1>
+            <h3> <b> This is where we post announcements, tips and tricks, new and updated features. </b></h3>
+            <hr class="my-5">
+        </div>
+    </div>
+</div>
+
+<!-- <div class="cols-1 cols-md-2 g-4">
+    <div class="col">
+        {% for post in allposts %}
+        <div class="container">
+            <div class="blog-posts mx-3 my-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="shadow p-3 mb-5 bg-body rounded width-35px">
+                        <img src={{post.image}} class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">{{post.title}}</h5>
+                            <p class="card-text">{{post.desc| truncatechars:150}}</p>
+                            <p class="card-title">{{post.author}}</p>
+                            <p class="card-title"><p>{{post.timestamp}}</p></p>
+                            <a href="{{post.slug}}" class="btn btn-dark">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        {% endfor %}
+    </div>
+</div> -->
+<!-- <div class="container">
+    <div class="row">
+         <div class="col">
+            {% for post in allposts %}
+            <div class="blog-posts mx-3 my-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <div class="shadow p-3 mb-5 bg-body rounded width-35px">
+                            <img src={{post.image}} class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">{{post.title}}</h5>
+                                <p class="card-text">{{post.desc| truncatechars:150}}</p>
+                                <p class="card-title">{{post.author}}</p>
+                                <p class="card-title">
+                                <p>{{post.timestamp}}</p>
+                                <a href="{{post.slug}}" class="btn btn-dark">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div> -->
+<!-- </div>  -->
+
+<div class="container py-3 px-3">
+    <div class="row mx-3">
+        {% for post in allposts %}
+        <div class="card mx-3 my-2" style="width: 18rem;">
+            
+            <div class="card-body">
+                <div class="card-body">
+                        <img src={{post.image}} class="card-img-top" alt="bhai">
+                        <h5 class="card-title">{{post.title}}</h5>
+                        <p class="card-text">{{post.desc| truncatechars:150}}</p>
+                        <p class="card-title">{{post.author}}</p>
+                        <p class="card-title">
+                        <p>{{post.timestamp}}</p>
+                        <a href="{{post.slug}}" class="btn btn-dark">View</a>
+                    </div>
+                </div>
+            </div>
+
+        {% endfor %}
+    </div>
+</div>
+{% endblock body %}
